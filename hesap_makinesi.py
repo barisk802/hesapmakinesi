@@ -1,6 +1,6 @@
 import streamlit as st
 
-st.title("💪 Beden Kitle İndeksi Hesaplama")
+st.title("🖩 Hesap Makinesi")
 
 print("""****************************
 Hesap Makinesi Programı
@@ -42,3 +42,4 @@ elif işlem=="4":
 else :
 
     print("Geçersiz işlem!")
+
