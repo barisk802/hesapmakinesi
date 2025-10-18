@@ -2,6 +2,8 @@ import streamlit as st
 
 st.title("🖩 Hesap Makinesi")
 
+st.write("Yapmak istediğiniz işlemi ve sayıları giriniz:")
+
 print("""****************************
 Hesap Makinesi Programı
 
@@ -23,7 +25,7 @@ Hesap Makinesi Programı
 
 a=int(input("Birinci Sayı:"))
 b=int(input("İkinci Sayı:"))
-print=("Yapacağınız işlemi seçiniz."(1-Toplama,2-Çıkarma,3-Çarpma,4-Bölme)))
+st.write=("Yapacağınız işlemi seçiniz."(1-Toplama,2-Çıkarma,3-Çarpma,4-Bölme)))
 
 işlem= input("İşlemi Giriniz:")
 
@@ -42,6 +44,7 @@ elif işlem=="4":
 else :
 
     print("Geçersiz işlem!")
+
 
 
 
