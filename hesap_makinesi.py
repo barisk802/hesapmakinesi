@@ -4,46 +4,35 @@ st.title("🖩 Hesap Makinesi")
 
 st.write("Yapmak istediğiniz işlemi ve sayıları giriniz:")
 
-print("""****************************
-Hesap Makinesi Programı
+# Sayı girişleri
+a = st.number_input("Birinci Sayı:", step=1.0)
+b = st.number_input("İkinci Sayı:", step=1.0)
 
-İşlemler;
+# İşlem seçimi
+işlem = st.selectbox(
+    "İşlemi Seçiniz:",
+    ("Toplama", "Çıkarma", "Çarpma", "Bölme")
+)
 
-1. Toplama İşlemi
+# Hesapla butonu
+if st.button("Hesapla"):
+    if işlem == "Toplama":
+        sonuc = a + b
+        st.success(f"{a} + {b} = {sonuc}")
+    elif işlem == "Çıkarma":
+        sonuc = a - b
+        st.info(f"{a} - {b} = {sonuc}")
+    elif işlem == "Çarpma":
+        sonuc = a * b
+        st.warning(f"{a} × {b} = {sonuc}")
+    elif işlem == "Bölme":
+        if b == 0:
+            st.error("Bir sayı sıfıra bölünemez ❌")
+        else:
+            sonuc = a / b
+            st.success(f"{a} ÷ {b} = {sonuc}")
 
-2. Çıkarma İşlemi
 
-3. Çarpma İşlemi
-
-4. Bölme İşlemi
-****************************
-""")
-
-
-
-
-
-a=int(input("Birinci Sayı:"))
-b=int(input("İkinci Sayı:"))
-st.write=("Yapacağınız işlemi seçiniz."(1-Toplama,2-Çıkarma,3-Çarpma,4-Bölme))
-
-işlem= input("İşlemi Giriniz:")
-
-if işlem=="1":
-    print("{} ile {} in toplamı {} dir".format(a,b,a+b))
-
-elif işlem=="2":
-    print("{} ile {} in farkı {} dir".format(a,b,a-b))
-
-elif işlem=="3":
-    print("{} ile {} çarpı {} dir".format(a,b,a * b))
-
-elif işlem=="4":
-    print("{} ile {} bölümü {} dir".format(a,b,a / b))
-
-else :
-
-    print("Geçersiz işlem!")
 
 
 
