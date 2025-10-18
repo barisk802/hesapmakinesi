@@ -1,3 +1,7 @@
+import streamlit as st
+
+st.title("💪 Beden Kitle İndeksi Hesaplama")
+
 print("""****************************
 Hesap Makinesi Programı
 
@@ -19,6 +23,7 @@ Hesap Makinesi Programı
 
 a=int(input("Birinci Sayı:"))
 b=int(input("İkinci Sayı:"))
+c=int(input("Yapacağınız işlemi seçiniz.(1-Toplama,2-Çıkarma,3-Çarpma,4-Bölme)"))
 
 işlem= input("İşlemi Giriniz:")
 
@@ -35,4 +40,5 @@ elif işlem=="4":
     print("{} ile {} bölümü {} dir".format(a,b,a / b))
 
 else :
+
     print("Geçersiz işlem!")
