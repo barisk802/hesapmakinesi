@@ -31,11 +31,4 @@ if st.button("Hesapla"):
         else:
             sonuc = a / b
             st.success(f"{a} ÷ {b} = {sonuc}")
-
-
-
-
-
-
-
-
+            
